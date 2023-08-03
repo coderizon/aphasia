@@ -1,0 +1,111 @@
+{
+  "cover_src": "www",
+  "cover": "https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+  "description": "Unleash your inner trivia master! Take the quiz, conquer challenges, and become a knowledge guru. Play now and see how sharp your wits are!",
+  "categories": {
+    "fruits": {
+      "cover_src": "www",
+      "cover": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "description": "Discover the fruity world! Test your knowledge on a variety of mouthwatering fruits. Play now and become a fruit expert!",
+      "instructions_variations": {
+        "standard": "What is on the image?"
+      },
+      "data": [
+        {
+          "id": "tomato",
+          "answer": "tomato",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+          "fun_fact": "Did you know that tomatoes are actually fruits, not vegetables? Despite their savory taste, tomatoes are botanically classified as berries. Originating from South America, these bright red gems are packed with essential nutrients like vitamins A, C, and K, as well as antioxidants like lycopene. From salads to sauces and beyond, tomatoes add a burst of flavor and color to countless dishes worldwide. So next time you savor a juicy tomato, remember that it's not just a vegetable imposter but a delightful fruit with a rich history and nutritional benefits!"
+        },
+        {
+          "id": "banana",
+          "answer": "banana",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFuYW5hfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Here's a fun fact about bananas: they grow in bunches called 'hands'! Native to Southeast Asia, bananas are not just a tasty treat, but a nutritious powerhouse too. Packed with potassium, vitamin B6, and fiber, bananas make for a perfect on-the-go snack or a delicious addition to smoothies and desserts. Did you know that they are technically berries? Unlike other fruits, bananas grow on a giant herbaceous plant, making them the world's largest herb! So, the next time you peel open a banana, relish the delightful sweetness and appreciate this amazing fruit's unique botanical journey."
+        },
+        {
+          "id": "pineapple",
+          "answer": "pineapple",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1490885578174-acda8905c2c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFuYW5hc3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that pineapple is the only known fruit that is actually made up of multiple berries that have fused together? That's right! When you enjoy a delicious pineapple, you're savoring the combination of multiple small individual fruit segments that have grown together to create one juicy and tropical delight. From its sweet and tangy flavor to its refreshing tropical aroma, the pineapple is a true marvel of nature. So, the next time you indulge in a slice of pineapple, take a moment to marvel at its fascinating berry fusion!"
+        },
+        {
+          "id": "citron",
+          "answer": "citron",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1567579018631-4a48bccc42e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2l0cm9ufGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that pineapple is the only known fruit that is actually made up of multiple berries that have fused together? That's right! When you enjoy a delicious pineapple, you're savoring the combination of multiple small individual fruit segments that have grown together to create one juicy and tropical delight. From its sweet and tangy flavor to its refreshing tropical aroma, the pineapple is a true marvel of nature. So, the next time you indulge in a slice of pineapple, take a moment to marvel at its fascinating berry fusion!"
+        },
+        {
+          "id": "guava",
+          "answer": "guava",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1629367308496-a2496ba22f88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3VhdmF8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that pineapple is the only known fruit that is actually made up of multiple berries that have fused together? That's right! When you enjoy a delicious pineapple, you're savoring the combination of multiple small individual fruit segments that have grown together to create one juicy and tropical delight. From its sweet and tangy flavor to its refreshing tropical aroma, the pineapple is a true marvel of nature. So, the next time you indulge in a slice of pineapple, take a moment to marvel at its fascinating berry fusion!"
+        },
+        {
+          "id": "pamplemousse",
+          "answer": "pamplemousse",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1622912789333-ba8bf8242e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGFtcGxlbW91c3NlfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that pineapple is the only known fruit that is actually made up of multiple berries that have fused together? That's right! When you enjoy a delicious pineapple, you're savoring the combination of multiple small individual fruit segments that have grown together to create one juicy and tropical delight. From its sweet and tangy flavor to its refreshing tropical aroma, the pineapple is a true marvel of nature. So, the next time you indulge in a slice of pineapple, take a moment to marvel at its fascinating berry fusion!"
+        }
+      ]
+    },
+    "peoples": {
+      "cover_src": "www",
+      "cover": "https://images.unsplash.com/photo-1488861859915-4b5a5e57649f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y3VsdHVyZXxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "description": "Explore the world in 'Peoples Puzzle'! Solve captivating puzzles inspired by diverse cultures and traditions. Unveil fascinating stories, celebrate diversity, and challenge your mind. Discover the beauty of humanity in every piece!",
+      "instructions_variations": {
+        "standard": "Who is on the image?"
+      },
+      "data": [
+        {
+          "id": "gomez",
+          "answer": "gomez",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBlb3BsZXxlbnwwfDB8MHx8fDI%3D&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that tomatoes are actually fruits, not vegetables? Despite their savory taste, tomatoes are botanically classified as berries. Originating from South America, these bright red gems are packed with essential nutrients like vitamins A, C, and K, as well as antioxidants like lycopene. From salads to sauces and beyond, tomatoes add a burst of flavor and color to countless dishes worldwide. So next time you savor a juicy tomato, remember that it's not just a vegetable imposter but a delightful fruit with a rich history and nutritional benefits!"
+        },
+        {
+          "id": "eliesar",
+          "answer": "eliesar",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1564156280315-1d42b4651629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fHBlb3BsZXxlbnwwfDB8MHx8fDI%3D&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Here's a fun fact about bananas: they grow in bunches called 'hands'! Native to Southeast Asia, bananas are not just a tasty treat, but a nutritious powerhouse too. Packed with potassium, vitamin B6, and fiber, bananas make for a perfect on-the-go snack or a delicious addition to smoothies and desserts. Did you know that they are technically berries? Unlike other fruits, bananas grow on a giant herbaceous plant, making them the world's largest herb! So, the next time you peel open a banana, relish the delightful sweetness and appreciate this amazing fruit's unique botanical journey."
+        },
+        {
+          "id": "roland",
+          "answer": "roland",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHBlb3BsZXxlbnwwfDB8MHx8fDI%3D&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that pineapple is the only known fruit that is actually made up of multiple berries that have fused together? That's right! When you enjoy a delicious pineapple, you're savoring the combination of multiple small individual fruit segments that have grown together to create one juicy and tropical delight. From its sweet and tangy flavor to its refreshing tropical aroma, the pineapple is a true marvel of nature. So, the next time you indulge in a slice of pineapple, take a moment to marvel at its fascinating berry fusion!"
+        },
+        {
+          "id": "ahne",
+          "answer": "ahne",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHBlb3BsZXxlbnwwfDB8MHx8fDI%3D&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that pineapple is the only known fruit that is actually made up of multiple berries that have fused together? That's right! When you enjoy a delicious pineapple, you're savoring the combination of multiple small individual fruit segments that have grown together to create one juicy and tropical delight. From its sweet and tangy flavor to its refreshing tropical aroma, the pineapple is a true marvel of nature. So, the next time you indulge in a slice of pineapple, take a moment to marvel at its fascinating berry fusion!"
+        },
+        {
+          "id": "maria",
+          "answer": "maria",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fHBlb3BsZXxlbnwwfDB8MHx8fDI%3D&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that pineapple is the only known fruit that is actually made up of multiple berries that have fused together? That's right! When you enjoy a delicious pineapple, you're savoring the combination of multiple small individual fruit segments that have grown together to create one juicy and tropical delight. From its sweet and tangy flavor to its refreshing tropical aroma, the pineapple is a true marvel of nature. So, the next time you indulge in a slice of pineapple, take a moment to marvel at its fascinating berry fusion!"
+        },
+        {
+          "id": "lisa",
+          "answer": "lisa",
+          "image_src": "www",
+          "image": "https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA5fHxwZW9wbGV8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=500&q=60",
+          "fun_fact": "Did you know that pineapple is the only known fruit that is actually made up of multiple berries that have fused together? That's right! When you enjoy a delicious pineapple, you're savoring the combination of multiple small individual fruit segments that have grown together to create one juicy and tropical delight. From its sweet and tangy flavor to its refreshing tropical aroma, the pineapple is a true marvel of nature. So, the next time you indulge in a slice of pineapple, take a moment to marvel at its fascinating berry fusion!"
+        }
+      ]
+    }
+  }
+}
