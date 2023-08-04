@@ -1,6 +1,9 @@
 import 'package:aphasia/domain/models/training.dart';
+import 'package:aphasia/service_locator.dart';
+import 'package:aphasia/widgets_related_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:speech_to_text/speech_to_text.dart';
 
 abstract class _UnimplementedAction {
   static const snackBar = SnackBar(
@@ -176,8 +179,23 @@ abstract class TrainingSessionWidget extends StatelessWidget {
   }
 }
 
+typedef OnMicStateChange = void Function(MicState);
+typedef OnMicRecording = void Function(String);
+typedef OnMicFinishedRecording = bool Function(String);
+typedef OnMicCanceledRecording = void Function();
+
 class RecordingMic extends StatefulWidget {
-  const RecordingMic({super.key});
+  final OnMicStateChange onMicStateChange;
+  final OnMicRecording onMicRecording;
+  final OnMicFinishedRecording onMicFinishedRecording;
+  final OnMicCanceledRecording? onMicCanceledRecording;
+  const RecordingMic({
+    super.key,
+    required this.onMicStateChange,
+    required this.onMicRecording,
+    required this.onMicFinishedRecording,
+    this.onMicCanceledRecording,
+  });
 
   @override
   State<StatefulWidget> createState() {
@@ -185,26 +203,60 @@ class RecordingMic extends StatefulWidget {
   }
 }
 
+// class MicInteraction extends ChangeNotifier {
+//   var _micState = MicState.disabled;
+//   var _transcript = TranscriptState.ready.text;
+
+//   void notifyMicState(MicState micState) {
+//     setState(() {
+//       _micState = micState;
+//       if (_micState == MicState.done &&
+//           widget.inputValidator(_transcript.toLowerCase())) {
+//         _micState = MicState.disabled;
+//         _transcript = TranscriptState.ready.text;
+//         widget.nextData();
+//       }
+//     });
+//   }
+
+//   void updateTranscript(String value) {
+//     setState(() {
+//       _transcript = value;
+//     });
+//   }
+// }
 class _RecordingMicState extends State<RecordingMic> {
   bool _isRecording = false;
 
   @override
   Widget build(BuildContext context) {
+    final speechToText = serviceLocator<SpeechToText>();
     return GestureDetector(
-      onTapDown: (_) {
-        setState(() {
-          _isRecording = true;
-        });
+      onTapDown: (_) async {
+        if (!_isRecording) {
+          var available = await speechToText.initialize();
+          if (available) {
+            setState(() {
+              _isRecording = true;
+              widget.onMicStateChange(MicState.recording);
+            });
+            speechToText.listen(onResult: (result) {
+              widget.onMicRecording(result.recognizedWords);
+            });
+          }
+        }
       },
       onTapUp: (_) {
         setState(() {
           _isRecording = false;
+          widget.onMicStateChange(MicState.done);
         });
       },
       onTapCancel: () {
         setState(() {
           _isRecording = false;
         });
+        speechToText.stop();
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),

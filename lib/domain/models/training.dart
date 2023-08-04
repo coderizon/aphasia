@@ -141,8 +141,14 @@ abstract class TrainingSession extends ChangeNotifier {
           _TrainingDataAnswerStatistic(_currentData!.id));
       _sessionStatistic.perDatasetStatistics.last.start();
     }
+    // print('salut');
     notifyListeners();
     return _currentData;
+  }
+
+  ({int successes, int misses}) get answerStats {
+    final result = _sessionStatistic.perDatasetStatistics.last;
+    return (successes: result.successes, misses: result.misses);
   }
 
   void stop() {

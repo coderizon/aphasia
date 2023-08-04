@@ -107,23 +107,6 @@ class HomePage extends StatelessWidget {
             );
           } else if (snapshot.hasError) {
             throw (snapshot.stackTrace!, snapshot.error!);
-            // return Center(
-            //   child: Column(
-            //     mainAxisAlignment: MainAxisAlignment.center,
-            //     crossAxisAlignment: CrossAxisAlignment.center,
-            //     children: <Widget>[
-            //       Icon(
-            //         Icons.error_outline,
-            //         color: Theme.of(context).colorScheme.error,
-            //         size: 60,
-            //       ),
-            //       Padding(
-            //         padding: const EdgeInsets.only(top: 16),
-            //         child: Text('Error: ${snapshot.error}'),
-            //       ),
-            //     ],
-            //   ),
-            // );
           } else {
             return Center(
               child: Column(
