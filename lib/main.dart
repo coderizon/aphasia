@@ -1,8 +1,11 @@
-import 'package:aphasia/domain/models/quiz_training.dart';
+import 'package:aphasia/domain/controllers/controller.dart';
+import 'package:aphasia/domain/models/training.dart';
+import 'package:aphasia/enums/training_enum.dart';
 import 'package:aphasia/service_locator.dart';
 import 'package:aphasia/view/quiz_training_widgets.dart';
 import 'package:aphasia/view/shared_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   setup();
@@ -81,33 +84,10 @@ class HomePage extends StatelessWidget {
     return FutureBuilder(
         future: serviceLocator.allReady(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-          if (snapshot.hasData) {
-            return Builder(
-              builder: (context) {
-                final quizTrainingDataset =
-                    serviceLocator<QuizTrainingDataset>();
-                return ListView(
-                  children: [
-                    TrainingDatasetOverviewWidget(
-                        trainingDataset: quizTrainingDataset,
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) {
-                              return QuizTrainingDatasetCategoryPicker(
-                                trainingDatasetCategories:
-                                    quizTrainingDataset.categories.cast(),
-                              );
-                            }),
-                          );
-                        })
-                  ],
-                );
-              },
-            );
-          } else if (snapshot.hasError) {
+          if (snapshot.hasError) {
             throw (snapshot.stackTrace!, snapshot.error!);
-          } else {
+          }
+          if (!snapshot.hasData) {
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -127,6 +107,36 @@ class HomePage extends StatelessWidget {
               ),
             );
           }
+          return Builder(
+            builder: (context) {
+              return ListView(
+                children: TrainingType.values.map((trainingType) {
+                  final nextWindow = switch (trainingType) {
+                    TrainingType.quiz => TrainingDatasetCategoryPickerWidget(
+                        dataset: Controller.quizTrainingDataset,
+                        onTap: (dataset) {
+                          final trainingSession =
+                              serviceLocator<TrainingSession>(param1: dataset);
+                          trainingSession.start();
+                          nextPage(
+                              context,
+                              ChangeNotifierProvider.value(
+                                value: trainingSession,
+                                builder: (context, _) {
+                                  return const QuizTrainingSessionWidget();
+                                },
+                              ));
+                        },
+                      ),
+                  };
+                  return TrainingTypePickerWidget(
+                    trainingType: trainingType,
+                    onTap: () => nextPage(context, nextWindow),
+                  );
+                }).toList(),
+              );
+            },
+          );
         });
   }
 }
